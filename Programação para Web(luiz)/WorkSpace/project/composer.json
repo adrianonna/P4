@@ -1,0 +1,5 @@
+{
+    "require": {
+        "kahlan/kahlan": "^4.6"
+    }
+}

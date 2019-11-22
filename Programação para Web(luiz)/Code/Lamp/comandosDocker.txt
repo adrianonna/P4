@@ -1,0 +1,55 @@
+docker-compose up -d //subir as imagens
+docker-compose down //para os serviços do conteiner
+docker-compose ps // lista os conteiners que estão rodando
+docker exec -it {nome conteiner} bash //abre terminal do conteiner
+mysql -u root -p //acesso ao banco
+docker-compose build //reconstruir o conteiner docker
+docker rm {nome conteiner} //apagar conteiner
+ctrl + R //pesquisa os comandos a medida que digita
+docker system prune //remove containers e images
+docker volume prune //remove os volumes não usados
+which //mostra onde está o docker
+
+
+dns: //IFPB
+- 200.129.79.61
+- 200.129.79.52
+
+
+
+
+BANCO
+create database {nomeDoBanco} //cria o banco de dados
+use {nomeDoBanco}; //entra no banco
+show tables; //mostra todas as tabelas
+show databases;
+show full columns from {nomeTabela}; //mostra todos os campos da tabela
+describe {tabela}; //mostra tabela
+
+create table usuarios(
+		idusuario int AUTO_INCREMENT PRIMARY key,
+		nome varchar(30),
+		telefone varchar(30),
+		email varchar(40),
+		senha varchar(32));
+
+
+
+PDO
+PDO::query — Executa uma instrução SQL, retornando um conjunto de resultados como um objeto PDOStatement
+PDO::exec — Executa uma instrução SQL e retornar o número de linhas afetadas
+PDO::prepare — Prepara uma instrução para execução e retorna um objeto de instrução
+PDOStatement::rowCount — Retorna o número de linhas afetadas pela última instrução SQL
+PDOStatement::execute — Executa uma declaração preparada
+
+
+
+DOCUMENTAÇÃO
+$dsn = 'mysql:dbname=testdb;host=127.0.0.1';
+$user = 'dbuser';
+$password = 'dbpass';
+$dbh = new PDO($dsn, $user, $password);
+
+LUIZ
+'mysql:host=mysql;dbname=egressos;port=3306;'
+
